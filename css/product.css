@@ -1,0 +1,188 @@
+.product {
+  padding-top: 120px;
+  padding-bottom: 168px;
+}
+
+.product-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-img-wrapper {
+  position: relative;
+  margin-right: 86px;
+  padding-left: 60px;
+  padding-bottom: 74px;
+}
+
+.product-img {
+  border-radius: 18px;
+}
+
+.product-content {
+  max-width: 584px;
+}
+
+.product-content-title {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 157%;
+}
+
+.product-content-subtitle {
+  margin-bottom: 20px;
+  font-family: "Georgia", serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 157%;
+  color: #01996d;
+}
+
+.product-content-text {
+  max-width: 530px;
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 144.5%;
+}
+.product-card {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+.card {
+  background-color: #ffffff;
+  max-width: 296px;
+  border-radius: 4px;
+  box-shadow: 0px 3.62249px 18.1125px rgba(165, 165, 165, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 28px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+}
+
+.card-title {
+  position: relative;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+  padding-bottom: 12px;
+  margin-bottom: 13px;
+  color: #000000;
+}
+
+.card-title::after {
+  /*элемент подчеркивания текста*/
+  content: " ";
+  position: absolute;
+  background-color: #000000;
+  height: 0.75px;
+  left: -7px;
+  right: -7px;
+  bottom: 0px;
+}
+
+.card-avatar {
+  margin-bottom: 25px;
+}
+
+.avatar {
+  text-align: center;
+}
+
+.avatar-img {
+  margin-bottom: 13px;
+  width: 57px;
+  height: 57px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-name {
+  font-size: 12px;
+}
+
+.card-contens {
+  text-align: left;
+  padding-left: 6px;
+}
+
+.card-contens-title {
+  font-family: "Georgia", serif;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 22px;
+  color: #000000;
+}
+
+.card ul {
+  font-size: 11px;
+  font-weight: 400;
+  list-style-type: disc; /*ставим маркеры*/
+  list-style-position: inside; /*находятся внутри*/
+  color: #000000;
+}
+
+.card ul li + li {
+  margin-top: 20px;
+}
+
+@media (max-width: 1299px) {
+  /* прописываем при ширине менее 1299*/
+  .product {
+    padding-top: 80px;
+  }
+  .product-img-wrapper {
+    flex: 1 0 auto; /* 1 - будет увеличивоться больше чем другие, 
+    0- не будет зжиматься, auto - размер автоматический*/
+    flex-basis: 50%; /*размер элемента по основной оси*/
+  }
+  .product-content-subtitle {
+    font-size: 40px;
+    line-height: 130%;
+  }
+  .product-card {
+    top: 60px;
+  }
+}
+@media (max-width: 991px) {
+  /* прописываем при ширине менее 991*/
+  .product {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+  .product-row {
+    /*выстраиваем в колонку*/
+    flex-direction: column-reverse;
+  }
+  .product-content {
+    margin-bottom: 40px;
+  }
+  .product-content-subtitle {
+    font-size: 30px;
+  }
+  .product-card {
+    /*выравниваем карточку по центру*/
+    position: relative;
+    z-index: 2;
+    margin-top: -10%;
+    display: flex;
+    justify-content: center;
+  }
+  .product-img-wrapper {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  /* прописываем при ширине менее 500*/
+  .product-card {
+    margin-top: -30%;
+  }
+}

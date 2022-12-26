@@ -1,0 +1,75 @@
+.header {
+  padding-top: 17px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.header-row {
+  display: flex;
+  align-items: center; /*выравнвание по поперечной оси*/
+}
+
+.header-nav {
+  font-weight: 500;
+  color: #292929;
+  margin-left: 172px;
+}
+
+.header-nav ul {
+  display: flex; /* элементы в одну линию*/
+}
+
+.header-nav li + li {
+  /*у первого элемента отступа с лева нет*/
+  margin-left: 70px;
+}
+
+.header-nav a {
+  transition: color 0.2s ease; /*меняет цвет эл. при наведении плавно*/
+}
+
+.header-nav a:hover {
+  /*при наведении элементы меняют цвет*/
+  color: #01996d;
+}
+.header-login {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.header-login > * + * {
+  /*отступ влево от эл. первого уровня*/
+  margin-left: 35px;
+}
+.header-login a {
+  color: #000000;
+  transition: color 0.2s ease; /* эл. при наведении плавно меняет цвет*/
+}
+
+.header-login a:hover {
+  color: #01996d;
+}
+
+@media (max-width: 1199px) {
+  /* прописываем при ширине менее 1199 меняются отступы*/
+  .header-row {
+    justify-content: space-between; /*по центру расположение*/
+  }
+  .header-nav {
+    margin-left: 30px;
+  }
+  .header-nav li + li {
+    margin-left: 50px;
+  }
+  .header-login {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  /* прописываем при ширине менее 991 скроем часть навигации*/
+  .header-nav,
+  .header-login {
+    display: none;
+  }
+}

@@ -1,0 +1,65 @@
+.home {
+  position: relative; /*обозначаем секцию родителем для отображения на ней картинки*/
+  padding-top: 175px;
+  padding-bottom: 175px;
+  min-height: 895px;
+}
+
+.home-content {
+  max-width: 440px;
+}
+
+.home-heading {
+  margin-bottom: 30px;
+  color: #01996d;
+  font-family: "Georgia", serif;
+  font-weight: 700;
+  font-size: 65px;
+}
+
+.home-text {
+  color: #484848;
+  line-height: 144.5%;
+  margin-bottom: 53px;
+  max-width: 430px;
+}
+
+.home-bg-img {
+  z-index: -1; /*выносим картинку назад за котейнер, чтоб впереди был блок надпись*/
+  position: absolute; /*растягиваем картнку по всей секции home*/
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(245, 239, 233);
+  /*если картинка не загрузится будет фон*/
+}
+
+.home-bg-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /*картинка корректно маштабируется на весь блок*/
+}
+
+@media (max-width: 991px) {
+  /* прописываем при ширине менее 991*/
+  .home {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    min-height: unset; /*убираем, высота будет идти по контенту*/
+  }
+
+  .home-heading {
+    font-size: 45px;
+    line-height: 1.2;
+  }
+
+  .home-text {
+    margin-bottom: 30px;
+  }
+
+  .home-bg-img img {
+    /*добавим картинки больше прозрачность*/
+    opacity: 0.5;
+  }
+}
